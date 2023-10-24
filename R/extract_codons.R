@@ -7,6 +7,7 @@
 #' @return Extracted codons, given the RNA sequence and the ORF chosen.
 #' @export
 #'
+
 extracted_codons <- function(RNA_string, start = 1){
   RNA_len <- nchar(RNA_string)
   codons <- substring(RNA_string,
