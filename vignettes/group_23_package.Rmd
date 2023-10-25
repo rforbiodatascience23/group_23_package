@@ -77,7 +77,7 @@ aminoacid_seq
 The **`plot_aa_counts`** function is used to visualize the frequency of amino acids in a sequence. Here's how you can create a bar plot for an amino acid sequence:
 
 ```{r}
-amino_acid_seq <- "MCLNDSFQHTGEKR"
+amino_acid_seq <- "AUGCUUAAAGGGUAG"
 aa_plot <- plot_aa_counts(amino_acid_seq)
 print(aa_plot)
 ```
