@@ -22,7 +22,7 @@ command:
 devtools::install_github("rforbiodatascience23/group_23_package")
 #> 
 #> ── R CMD build ─────────────────────────────────────────────────────────────────
-#> * checking for file ‘/tmp/RtmpeBGRHN/remotesc59c015dcc24d/rforbiodatascience23-group_23_package-4eab5d0/DESCRIPTION’ ... OK
+#> * checking for file ‘/tmp/Rtmpek6HeB/remotesc620e1044a4c7/rforbiodatascience23-group_23_package-a0c2170/DESCRIPTION’ ... OK
 #> * preparing ‘enigma’:
 #> * checking DESCRIPTION meta-information ... OK
 #> * checking for LF line-endings in source and make files and shell scripts

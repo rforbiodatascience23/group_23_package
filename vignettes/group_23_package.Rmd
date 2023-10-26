@@ -10,9 +10,7 @@ vignette: >
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
-  message=FALSE,
-  warnings=FALSE
+  comment = "#>"
 )
 ```
 
@@ -30,7 +28,7 @@ The group_23_package is a versatile tool for molecular biologists, geneticists, 
 
 You can install the group_23_package from GitHub using the following command:
 
-```{r}
+```{r, message=FALSE}
 devtools::install_github("rforbiodatascience23/group_23_package")
 #library(group_23_package)
 library(enigma)
