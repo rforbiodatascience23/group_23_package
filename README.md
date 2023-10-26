@@ -1,6 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+Github link to the package:
+<https://github.com/rforbiodatascience23/group_23_package>
+
 # Introduction
 
 The group_23_package is a versatile tool for molecular biologists,
@@ -17,17 +20,14 @@ command:
 
 ``` r
 devtools::install_github("rforbiodatascience23/group_23_package")
-#> Downloading GitHub repo rforbiodatascience23/group_23_package@HEAD
 #> 
 #> ── R CMD build ─────────────────────────────────────────────────────────────────
-#> * checking for file ‘/tmp/Rtmpxvdqpa/remotesb95fa43daf03e/rforbiodatascience23-group_23_package-84ead53/DESCRIPTION’ ... OK
+#> * checking for file ‘/tmp/RtmpeBGRHN/remotesc59c015dcc24d/rforbiodatascience23-group_23_package-4eab5d0/DESCRIPTION’ ... OK
 #> * preparing ‘enigma’:
 #> * checking DESCRIPTION meta-information ... OK
 #> * checking for LF line-endings in source and make files and shell scripts
 #> * checking for empty or unneeded directories
 #> * building ‘enigma_0.1.0.tar.gz’
-#> Installing package into '/tmp/RtmpGOZqn4/temp_libpathb90dc48156e4d'
-#> (as 'lib' is unspecified)
 #library(group_23_package)
 library(enigma)
 ```
@@ -143,8 +143,25 @@ dependencies in a package.
 
 # The @importFrom vs. the package::function()
 
-Using @importFrom in a function description documents package
-dependencies but doesn’t make functions directly accessible in code.
-package::function() notation allows direct access to external functions
-without importing them, but can clutter code with package prefixes. You
-can use both approaches for clarity and accessibility.
+When it comes to the inclusion of dependencies in packages, two distinct
+approaches may be employed. First, the utilization of @importFrom is
+recommended when the requirement pertains to just one or a couple of
+functions from an external package. In contrast, the employment of the
+syntax package::function() is advised when the necessity arises for a
+more extensive utilization of multiple functions from the aforementioned
+package. Furthermore, the use of @importFrom serves to mitigate the
+likelihood of namespace conflicts, while employing package::function()
+is instrumental in clearly designating the source package of the desired
+functions.
+
+In the particular context of the enigma package, a deliberate choice was
+made to consistently use the package::function() notation throughout the
+code. This decision was undertaken to unambiguously specify the origin
+of the functions being utilized. Additionally, @importFrom was
+integrated into the package description, enumerating the specific
+functions being employed from external packages. This meticulous
+approach was taken with the objective of forestalling potential
+namespace conflicts. To be more precise, the functions incorporated
+include ggplot, aes, geom_col, theme_bw, and theme from the ggplot2
+package, as well as str_split, boundary, and str_count from the stringr
+package.
