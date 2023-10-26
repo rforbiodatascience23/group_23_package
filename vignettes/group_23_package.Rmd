@@ -43,7 +43,6 @@ DNA_seq <- "ATGGCTTAG"
 RNA_seq <- transcribe(DNA_seq)
 RNA_seq
 
-# The output is the RNA sequence: "AUGGCUUAG"
 ```
 
 # **Function 2: `extracted_codons`**
@@ -54,8 +53,6 @@ The **`extracted_codons`** function extracts codons from an RNA sequence, consid
 RNA_seq <- "AUGCUUAAAGGGUAG"
 codons <- extracted_codons(RNA_seq, start = 1)
 codons
-
-# The output id the RNA string splitted into codons: "AUG" "CUU" "AAA" "GGG" "UAG"
 ```
 
 # **Function 3: `codon_table`**
@@ -70,8 +67,6 @@ The **`codon_to_aa`** function translates codons into amino acids using the prov
 codons <- c("AUG", "CUU", "AAA", "GGG", "UAG")
 aminoacid_seq <- codon_to_aa(codons)
 aminoacid_seq
-
-# The output is a list of the aminoacids: Met, Leu, Lys, Gly. The last codon is the STOP codon
 ```
 
 # **Function 5: `plot_aa_counts`**

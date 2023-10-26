@@ -22,7 +22,7 @@ command:
 devtools::install_github("rforbiodatascience23/group_23_package")
 #> 
 #> ── R CMD build ─────────────────────────────────────────────────────────────────
-#> * checking for file ‘/tmp/Rtmpek6HeB/remotesc620e1044a4c7/rforbiodatascience23-group_23_package-a0c2170/DESCRIPTION’ ... OK
+#> * checking for file ‘/tmp/RtmpA1j0ar/remotesc646c250cce87/rforbiodatascience23-group_23_package-2e1d117/DESCRIPTION’ ... OK
 #> * preparing ‘enigma’:
 #> * checking DESCRIPTION meta-information ... OK
 #> * checking for LF line-endings in source and make files and shell scripts
@@ -42,7 +42,6 @@ DNA_seq <- "ATGGCTTAG"
 RNA_seq <- transcribe(DNA_seq)
 RNA_seq
 #> [1] "AUGGCUUAG"
-# The output is the RNA sequence: "AUGGCUUAG"
 ```
 
 ### Function 2: extracted_codons
@@ -56,7 +55,6 @@ RNA_seq <- "AUGCUUAAAGGGUAG"
 codons <- extracted_codons(RNA_seq, start = 1)
 codons
 #> [1] "AUG" "CUU" "AAA" "GGG" "UAG"
-# The output id the RNA string splitted into codons: "AUG" "CUU" "AAA" "GGG" "UAG"
 ```
 
 ### Function 3: codon_table
@@ -77,8 +75,6 @@ codons <- c("AUG", "CUU", "AAA", "GGG", "UAG")
 aminoacid_seq <- codon_to_aa(codons)
 aminoacid_seq
 #> [1] "MLKG_"
-
-# The output is a list of the aminoacids: Met, Leu, Lys, Gly. The last codon is the STOP codon
 ```
 
 ### Function 5: plot_aa_counts
